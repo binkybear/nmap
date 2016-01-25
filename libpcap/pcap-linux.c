@@ -234,6 +234,10 @@
 #include <linux/wireless.h>
 #endif /* HAVE_LINUX_WIRELESS_H */
 
+#if defined(__ANDROID__) || defined(ANDROID)
+#undef IW_MODE_MONITOR
+#endif
+
 /*
  * Got libnl?
  */

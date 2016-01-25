@@ -146,7 +146,7 @@
     #endif /* WIN32 */
 #endif /* HAVE_CONFIG_H */
 
-#ifndef WIN32
+#if !defined(ANDROID) && !defined(__ANDROID__) && !defined(WIN32)
     #include <sysexits.h>
 #endif
 
